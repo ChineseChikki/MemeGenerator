@@ -15,7 +15,7 @@ const Meme = () => {
     setLoading(true);
     setMeme((state) => ({ ...state, message: "Generating new image..." }));
     fetch(
-      "https://api.unsplash.com/photos/random/?client_id=0boWQivATQeKVKE6-cZgDprYjIWqQLXVViUqwdTNvf0"
+      "https://api.unsplash.com/photos/random/?client_id=Ig1PmFjHSihJpgtpBf57PxcBvHFITWIqAhkagSfIgbI"
     )
       .then((res) => res.json())
       .then((data) => {
