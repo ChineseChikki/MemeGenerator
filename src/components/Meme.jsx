@@ -5,7 +5,6 @@ const Meme = () => {
   const [meme, setMeme] = React.useState({
     topText: "",
     bottomText: "",
-    // randomImage: "Drake Hotline Bling",
     imgUrl: "",
     message: "",
   });
@@ -21,7 +20,6 @@ const Meme = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-
         setLoading(false);
 
         setMeme((state) => ({
@@ -46,6 +44,7 @@ const Meme = () => {
   }, []);
 
   function handleChange(event) {
+    console.log(event);
     const { name, value } = event.target;
     setMeme((prevMeme) => ({
       ...prevMeme,
@@ -98,3 +97,9 @@ const Meme = () => {
 };
 
 export default Meme;
+
+// "https://api.unsplash.com/photos/random
+// https://api.unsplash.com/
+// Ig1PmFjHSihJpgtpBf57PxcBvHFITWIqAhkagSfIgbI
+// https://api.unsplash.com/photos/random/?client_id= Ig1PmFjHSihJpgtpBf57PxcBvHFITWIqAhkagSfIgbI
+// "https://api.unsplash.com/photos/random/?client_id=Ig1PmFjHSihJpgtpBf57PxcBvHFITWIqAhkagSfIgbI"
