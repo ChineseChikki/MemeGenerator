@@ -5,10 +5,11 @@ const Meme = () => {
   const [meme, setMeme] = React.useState({
     topText: "",
     bottomText: "",
-    randomImage: "Drake Hotline Bling",
+    // randomImage: "Drake Hotline Bling",
     imgUrl: "",
     message: "",
   });
+
   const [loading, setLoading] = React.useState(true);
 
   function generateNewImage() {
@@ -78,16 +79,17 @@ const Meme = () => {
           Get a new meme image
         </button>
       </div>
+
       {loading ? (
         <h4 style={{ textAlign: "center", fontStyle: "italic" }}>
           {meme.message}
         </h4>
       ) : (
         <div className="meme">
-          <img src={meme.imgUrl} className="meme--image" />
+          <img src={meme.imgUrl} />
           <div className="meme-container">
-            <h2 className="meme--text top">{meme.topText}</h2>
-            <h2 className="meme--text bottom ">{meme.bottomText}</h2>
+            <h2>{meme.topText}</h2>
+            <h2>{meme.bottomText}</h2>
           </div>
         </div>
       )}
